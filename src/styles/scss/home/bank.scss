@@ -1,0 +1,40 @@
+.button-promo-per{
+  font-size: 1.6vw!important;
+  color: #ffffff !important;
+  background: #C4161C!important;
+  padding: 0.7em!important;
+}
+
+.button-promo-biz{
+  font-size: 1.6vw!important;
+  margin-left:2em!important;
+  color:#C4161C!important;
+  background: #fff!important;
+  padding: 0.5em!important;
+
+
+}
+
+@media screen and (min-width: 300px) {
+  .bankLogoSize{
+    height:100%;
+    width:100%;
+  }
+  .bank {
+    height: auto;
+    margin-bottom: 5em;
+  }
+}
+
+
+@media only screen and (min-width : 500px) {
+  .promoIntro{
+    position:relative;
+    left:2em;
+    top:10em;
+    font-size: 2vw;
+    color: white;
+  }
+
+}
+

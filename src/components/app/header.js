@@ -195,7 +195,7 @@ class NavBar extends React.Component {
 
         return (
             <div className={classes.root}>
-                <AppBar position="static" className={classes.header}>
+                <AppBar position="static" className={classes.header} style={{zIndex:'99'}}>
 
                     <Toolbar style={{margin:"0 auto", }}>
                         <Link to=''><img src={logo} className={classes.title} style={{marginRight:'2rem'}}/></Link>

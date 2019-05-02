@@ -1,0 +1,54 @@
+.service{
+  background-color: #F4F6F7;
+  padding: 1em 0 8em 0;
+  height:100%;
+}
+
+.service-size{
+  width:100%
+}
+
+.service-square{
+  width:100%;
+  height: 170px;
+}
+
+.service-subtitle{
+  text-align: center;
+  color:white;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 300px) {
+  .no-padding{
+    padding:0!important;
+    flex-basis: unset!important;
+  }
+
+  .service {
+    padding-top: 0.8em;
+  }
+
+  .service-subtitle{
+    top:-6em;
+    position:relative;
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (min-width : 500px) {
+  .service {
+    padding:1em 5em 10em 5em;
+  }
+
+  .service-square{
+    height: 18vw;
+  }
+
+  .service-subtitle{
+    top:-8em;
+    position:relative;
+    font-size: 1.4vw;
+  }
+}
+
