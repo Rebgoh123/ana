@@ -13,9 +13,9 @@
   overflow-y:scroll;
 }
 
-.slick-list {
-  z-index: -1;
-}
+/*.slick-list {*/
+  /*z-index: -1;*/
+/*}*/
 
 .caption {
   font-size: 4vw;
@@ -36,9 +36,14 @@ h1{
   font-size: 3vw!important;
 }
 
+.bank h1{
+  color:#828F97;
+}
+
 .pillars{
   padding:1em;
   margin-bottom:5em;
+  height:auto;
 }
 
 .pillars-round{
@@ -62,41 +67,66 @@ h1{
 
 .pillars-subtitle{
   text-align: center;
-  font-weight: bold;
 }
 
-.service {
-  padding:1em;
-  padding-bottom:8em;
-background-color: #F4F6F7;
+.pillars-button{
+  display:block!important;
+  margin:auto!important;
+  top:5em;
+  color:#C4161C!important;
+  border-color:#C4161C!important;
+}
+
+.service-size{
+  width:100%;
 }
 
 .service-square{
-  display:block;
-  margin:auto;
-  background-color: #FDF2F2!important;
+  width:100%;
+  height: 170px;
 }
 
-.service-subtitle{
-  margin-top:-4em;
-  font-size: 1.4vw;
-  text-align: center;
-  color:white;
-  font-weight: bold;
+.button-promo-per{
+  font-size: 1.6vw!important;
+  color: #ffffff !important;
+  background: #C4161C!important;
+  padding: 0.7em!important;
+}
+
+.button-promo-biz{
+  font-size: 1.6vw!important;
+  margin-left:2em!important;
+  color:#C4161C!important;
+  background: #fff!important;
+  padding: 0.5em!important;
+
+
 }
 
 @media screen and (min-width: 300px) {
+
+  .no-padding{
+    padding:0!important;
+    flex-basis: unset!important;
+  }
+
   .bannerSize{
     height:190px
+  }
+
+  .bankLogoSize{
+    height:100%;
+    width:100%;
   }
 
   .pillars{
     padding-top:1em;
   }
 
-  .pillars h1{
-    font-size: 1.3em;
-    margin-bottom: 1.5em;
+  h1{
+    color:#C4161C;
+    text-align: center;
+    font-size: 6vw!important;
   }
 
   .pillars-round{
@@ -123,6 +153,27 @@ background-color: #F4F6F7;
     height:4em;
   }
 
+  .service {
+    padding-top: 0.8em;
+    background-color: #F4F6F7;
+    height: auto;
+    margin-bottom: 3em;
+  }
+
+  .service-subtitle{
+    top:-6em;
+    position:relative;
+    font-size: 5vw;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+  }
+
+  .bank {
+    height: auto;
+    margin-bottom: 5em;
+  }
+
   .caption {
     margin-left: 1.4rem;
     top: 2rem;
@@ -142,6 +193,7 @@ background-color: #F4F6F7;
     position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 99;
   }
 
   .header-button-grid{
@@ -209,6 +261,16 @@ background-color: #F4F6F7;
     height:auto
   }
 
+  .promoIntro{
+    position:relative;
+    left:2em;
+    top:10em;
+    font-size: 2vw;
+    color: white;
+  }
+
+
+
   .pillars{
     padding-top:0;
   }
@@ -235,10 +297,23 @@ background-color: #F4F6F7;
     height:0;
   }
 
+  .service {
+    padding:1em;
+    padding-bottom:8em;
+    background-color: #F4F6F7;
+  }
+
   .service-square{
-    width: 340px;
-    height: 340px;
-    flex-grow: 0!important;
+    width: 22vw;
+    height: 22vw;
+  }
+
+  .service-subtitle{
+    margin-top:-4em;
+    font-size: 1.4vw;
+    text-align: center;
+    color:white;
+    font-weight: bold;
   }
 
   .caption {

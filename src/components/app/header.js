@@ -202,7 +202,6 @@ class NavBar extends React.Component {
 
                         <div className={classes.grow} />
                         <div className={classes.sectionDesktop} >
-                            {/*style={{width:"900px"}}*/}
                             <NavButtonLink title='home' to=''/>
 
                             <CustomizedMenu  title="Services"

@@ -59,7 +59,7 @@ class CustomizedMenu extends React.Component {
                         {this.props.title} {this.props.logo}
                     </Button>
 
-                    <Popper open={open} anchorEl={this.anchorEl} disablePortal transition style={{marginLeft:this.props.left}}>
+                    <Popper open={open} anchorEl={this.anchorEl} disablePortal transition style={{marginLeft:this.props.left, zIndex:'99'}}>
                         {({ TransitionProps, placement }) => (
                             <Grow
                                 {...TransitionProps}
