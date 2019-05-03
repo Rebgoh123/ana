@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faPlay,faPhone,faEnvelopeOpenText,faFax,faLocationArrow,faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import "../node_modules/slick-carousel/slick/slick.css";
 import "../node_modules/slick-carousel/slick/slick-theme.css";
@@ -23,7 +20,12 @@ import NavBar from './components/app/header';
 const loggerMiddleware = createLogger();
 const createStoreWithMiddleware = applyMiddleware(promise,loggerMiddleware)(createStore);
 
-library.add(faPlay)
+library.add(faPlay);
+library.add(faPhone);
+library.add(faEnvelopeOpenText);
+library.add(faFax);
+library.add(faLocationArrow);
+library.add(faArrowRight);
 
 const THEME = createMuiTheme({
     typography: {

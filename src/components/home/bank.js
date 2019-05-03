@@ -76,6 +76,11 @@ class Bank extends Component{
     render() {
         const { classes } = this.props;
 
+        const bg = {
+            backgroundImage: `linear-gradient(to bottom, rgba(205, 169, 157, 0.7), rgba(205, 169, 157, 0.7)),
+  url(${promo_mobile})`
+        };
+
         const settingDesktop = {
             dots: true,
             infinite: true,
@@ -100,67 +105,67 @@ class Bank extends Component{
 
             <Slider {...settingDesktop} >
                 <div>
-                    <img className="bannerSize" src={bea}/>
+                    <img className="bankLogoSize" src={bea}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={boc}/>
+                    <img className="bankLogoSize" src={boc}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={cimb}/>
+                    <img className="bankLogoSize" src={cimb}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={citibank}/>
+                    <img className="bankLogoSize" src={citibank}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={dbs}/>
+                    <img className="bankLogoSize" src={dbs}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={ethoz}/>
+                    <img className="bankLogoSize" src={ethoz}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={HLfinance}/>
+                    <img className="bankLogoSize" src={HLfinance}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={hsbc}/>
+                    <img className="bankLogoSize" src={hsbc}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={maybank}/>
+                    <img className="bankLogoSize" src={maybank}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={ocbc}/>
+                    <img className="bankLogoSize" src={ocbc}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={posb}/>
+                    <img className="bankLogoSize" src={posb}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={rhb}/>
+                    <img className="bankLogoSize" src={rhb}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={sbi}/>
+                    <img className="bankLogoSize" src={sbi}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={singapurafinance}/>
+                    <img className="bankLogoSize" src={singapurafinance}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={standchart}/>
+                    <img className="bankLogoSize" src={standchart}/>
                 </div>
 
                 <div>
-                    <img className="bannerSize" src={uob}/>
+                    <img className="bankLogoSize" src={uob}/>
                 </div>
             </Slider>
 
@@ -239,28 +244,33 @@ class Bank extends Component{
         return (
             <div className="bank">
                 <h1> Our Bank Partners </h1>
-<div className={classes.sectionDesktop}>
-                {renderDesktop}
+                    <div className={classes.sectionDesktop}>
+                    {renderDesktop}
 
-                <div className="promoIntro">
+                        <img className="bankBannerSize" src={promo}/>
+                        <div className="promoIntro">
+                            <h2>Claim a FREE $100 NTUC Voucher!</h2>
+                            <h3>Simply secure your loan with us today.</h3>
+                            <Button variant="contained" className="button-promo-per">
+                                PERSONAL LOAN
+                            </Button>
+                            <Button variant="contained" className="button-promo-biz">
+                                BUSINESS LOAN
+                            </Button>
+                        </div>
 
-                    <h2>Claim a FREE $100 NTUC Voucher!</h2>
-                    <h3>Simply secure your loan with us today.</h3>
-                    <Button variant="contained" className="button-promo-per">
-                        PERSONAL LOAN
-                    </Button>
-                    <Button variant="contained" className="button-promo-biz">
-                        BUSINESS LOAN
-                    </Button>
-                </div>
+                    </div>
 
-    <img className="bannerSize" src={promo}/>
-
-</div>
                 <div className={classes.sectionMobile}>
                 {renderMobile}
-                    <img className="bannerSize" src={promo_mobile}/>
 
+                    <div className="bankBannerSize" style={{backgroundImage:`url(${promo_mobile})`}}/>
+
+
+                    <div class="promoIntro">
+                    <h2>Claim a FREE $100 NTUC Voucher!</h2>
+                    <h3>Simply secure your loan with us today.</h3>
+                </div>
                 </div>
 
             </div>

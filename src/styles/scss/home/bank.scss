@@ -1,3 +1,27 @@
+
+
+
+.bank{
+  background-color: #fff;
+  padding: 1em 0 8em 0;
+  height:100%;
+  position: relative
+}
+
+
+
+.bank .slick-prev{
+  display: none!important;
+}
+
+.bank .slick-next{
+  display: none!important;
+}
+
+.bank h1{
+  color:#828F97;
+}
+
 .button-promo-per{
   font-size: 1.6vw!important;
   color: #ffffff !important;
@@ -12,29 +36,63 @@
   background: #fff!important;
   padding: 0.5em!important;
 
-
 }
 
+
 @media screen and (min-width: 300px) {
-  .bankLogoSize{
-    height:100%;
-    width:100%;
+
+  .bank .slick-list {
+    margin: 0 2em !important;
+  }
+  .bankLogoSize {
+    height: 100%;
+    width: 100%;
   }
   .bank {
+    padding: 1em 0 0 0;
     height: auto;
-    margin-bottom: 5em;
+  }
+
+
+  .bankBannerSize {
+    margin-top: 4em;
+    width: 100%;
+    height: 10em;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.4);
+  }
+
+  .promoIntro {
+    margin: -12em 4em 0 4em;
+    font-size: 3vw;
+    color: white;
   }
 }
 
 
 @media only screen and (min-width : 500px) {
+
+
+  .bank{
+    padding: 1em 0 8em 0;
+  }
+
+  .bank .slick-list{
+    margin: 0 4.5em!important;
+  }
+
   .promoIntro{
-    position:relative;
-    left:2em;
-    top:10em;
-    font-size: 2vw;
+    margin: -12.5em 4em 0 4em;
+    font-size: 1.8vw;
     color: white;
   }
+
+  .bankBannerSize{
+    margin-top:4em;
+    height:auto;
+    width:100%;
+  }
+
 
 }
 

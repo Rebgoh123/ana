@@ -5,6 +5,9 @@ import Carousel from './carousel';
 import Pillars from './pillars'
 import Service from './service'
 import Bank from './bank'
+import Contact from './contact'
+import About from './about'
+import Footer from './footer'
 
 class Home extends Component{
 
@@ -16,6 +19,9 @@ class Home extends Component{
                 <Pillars/>
                 <Service/>
                 <Bank/>
+                <Contact/>
+                <About/>
+                <Footer/>
             </div>
     );
     }

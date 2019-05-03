@@ -1,0 +1,24 @@
+.about{
+  background:#828F97;
+}
+
+.about-info{
+  color:white;
+  width: 80%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  padding: 2em;
+}
+
+.about p{
+  font-size:1vw;
+}
+
+
+@media screen and (min-width: 300px) {
+  .about p{
+    font-size:3vw;
+  }
+
+}

@@ -1,88 +1,31 @@
 .NavBar-header-4 {
   position: relative!important;
 }
-//.bannerSize{
-//  width:100%;
-//}
-//
 
-//
-//
-//.bank h1{
-//  color:#828F97;
-//}
-//
-//.service-size{
-//  width:100%;
-//}
-//
-//.service-square{
-//  width:100%;
-//  height: 170px;
-//}
-//
-//.button-promo-per{
-//  font-size: 1.6vw!important;
-//  color: #ffffff !important;
-//  background: #C4161C!important;
-//  padding: 0.7em!important;
-//}
-//
-//.button-promo-biz{
-//  font-size: 1.6vw!important;
-//  margin-left:2em!important;
-//  color:#C4161C!important;
-//  background: #fff!important;
-//  padding: 0.5em!important;
-//
-//
-//}
-//
+.footer{
+  background:black;
+  color:white;
+}
+
+
+.footer-info{
+  width: 80%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 @media screen and (min-width: 300px) {
-  //
-  //.no-padding{
-  //  padding:0!important;
-  //  flex-basis: unset!important;
-  //}
-  //
-  //.bannerSize{
-  //  height:190px
-  //}
-  //
-  //.bankLogoSize{
-  //  height:100%;
-  //  width:100%;
-  //}
+
   h1{
     color:#C4161C;
     text-align: center;
     font-size: 6vw;
   }
 
-  //
-  //.service {
-  //  padding-top: 0.8em;
-  //  background-color: #F4F6F7;
-  //  height: auto;
-  //  margin-bottom: 3em;
-  //}
-  //
-  //.service-subtitle{
-  //  top:-6em;
-  //  position:relative;
-  //  font-size: 5vw;
-  //  text-align: center;
-  //  color:white;
-  //  font-weight: bold;
-  //}
-  //
-  //.bank {
-  //  height: auto;
-  //  margin-bottom: 5em;
-  //}
-
 }
-//
+
 
 @media only screen and (min-width : 500px) {
   h1{
@@ -90,63 +33,6 @@
     text-align: center;
     font-size: 3.5vw;
   }
-  //.bannerSize{
-  //  height:auto
-  //}
-  //
-  //.promoIntro{
-  //  position:relative;
-  //  left:2em;
-  //  top:10em;
-  //  font-size: 2vw;
-  //  color: white;
-  //}
-  //
-  //.pillars{
-  //  padding-top:0;
-  //}
-  //
-  //.pillars h1{
-  //  font-size: 2em;
-  //}
-  //
-  //.pillars-round{
-  //  width: 134px;
-  //  height: 134px;
-  //}
-  //
-  //.pillarSize{
-  //  padding-top: 1.6em;
-  //}
-  //
-  //.pillarSize-big{
-  //  padding-top: 1em;
-  //}
-  //
-  //.pillar-divider{
-  //  width:0;
-  //  height:0;
-  //}
-  //
-  //.service {
-  //  padding:1em;
-  //  padding-bottom:8em;
-  //  background-color: #F4F6F7;
-  //}
-  //
-  //.service-square{
-  //  width: 22vw;
-  //  height: 22vw;
-  //}
-  //
-  //.service-subtitle{
-  //  margin-top:-4em;
-  //  font-size: 1.4vw;
-  //  text-align: center;
-  //  color:white;
-  //  font-weight: bold;
-  //}
+
 }
-//
-//
-//
+

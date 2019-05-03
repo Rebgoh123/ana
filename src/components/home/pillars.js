@@ -16,7 +16,7 @@ const Pillars = function (){
         <div className="pillars">
             <h1>6 Pillars of Working with Augend & Addend</h1>
             <Grid container spacing={24}>
-                <Grid item xs>
+                <Grid item md={2} xs={4}>
                     <div className="pillars-round">
                         <img className="pillarSize" src={confidential}/>
 
@@ -24,7 +24,7 @@ const Pillars = function (){
                     </div>
                 </Grid>
 
-                <Grid item xs>
+                <Grid item md={2} xs={4}>
                     <div className="pillars-round">
                         <img className="pillarSize-big" src={invitation}/>
 
@@ -32,7 +32,7 @@ const Pillars = function (){
                     </div>
                 </Grid>
 
-                <Grid item xs>
+                <Grid item md={2} xs={4}>
                     <div className="pillars-round">
                         <img className="pillarSize" src={best}/>
 
@@ -40,20 +40,20 @@ const Pillars = function (){
                     </div>
                 </Grid>
                 <div className="pillar-divider"/>
-                <Grid item xs>
+                <Grid item md={2} xs={4}>
                     <div className="pillars-round">
                         <img className="pillarSize-big" src={experience}/>
 
                         <p className="pillars-subtitle" > Experience</p>
                     </div>
                 </Grid>
-                <Grid item xs>
+                <Grid item md={2} xs={4}>
                     <div className="pillars-round">
                         <img className="pillarSize-big" src={personalised}/>
                         <p className="pillars-subtitle"> Fast & Efficient</p>
                     </div>
                 </Grid>
-                <Grid item xs>
+                <Grid item md={2} xs={4}>
                     <div className="pillars-round">
                         <img className="pillarSize-big" src={personalised}/>
 

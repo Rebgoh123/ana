@@ -35,14 +35,14 @@
   }
 
   .pillars-round{
-    width: 5.1em;
-    height: 5.1em;
+    width: 5em;
+    height: 5em;
   }
 
   .pillars-subtitle{
     text-align: center;
     padding-top: 0.5em;
-    font-size:0.8em;
+    font-size:3.5vw;
   }
 
   .pillarSize{
@@ -55,7 +55,7 @@
 
   .pillar-divider{
     width:100%;
-    height:4em;
+    height:18vw;
   }
 
   .pillars-button{
@@ -103,4 +103,24 @@
     color:#C4161C!important;
     border-color:#C4161C!important;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+  .pillars{
+    padding-top:0;
+    margin:1em;
+  }
+
+  .pillars-round{
+    width: 90px;
+    height: 90px;
+  }
+
+  .pillars-subtitle{
+    text-align: center;
+    padding-top: 0.5em;
+    font-size:1em;
+  }
+
 }

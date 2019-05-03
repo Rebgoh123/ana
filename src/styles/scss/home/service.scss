@@ -23,10 +23,12 @@
   .no-padding{
     padding:0!important;
     flex-basis: unset!important;
+    width:100%;
   }
 
   .service {
-    padding-top: 0.8em;
+    padding: 0.8em 0 3em 0;
+
   }
 
   .service-subtitle{
@@ -52,3 +54,39 @@
   }
 }
 
+
+@media (min-width: 768px) and (max-width: 1280px)  {
+
+  .service {
+    padding:1em 0 3em 0;
+  }
+
+  .service-square{
+    height: 44vw;
+  }
+
+  .service-subtitle{
+    top:-6em;
+    position:relative;
+    font-size: 3.4vw;
+  }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1280px)  {
+
+  .service {
+    padding:1em 5em 10em 5em;
+  }
+
+  .service-square{
+    height: 18vw;
+  }
+
+  .service-subtitle{
+    top:-8em;
+    position:relative;
+    font-size: 1.4vw;
+  }
+
+}

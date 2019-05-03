@@ -1,10 +1,14 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBoxes, faPeopleCarry, faTags } from '@fortawesome/free-solid-svg-icons'
+import { faPlay,faPhone,faEnvelopeOpenText,faFax,faLocationArrow,faArrowRight } from '@fortawesome/free-solid-svg-icons'
+
 
 const ImportFA = () => {
-    library.add(faBoxes);
-    library.add(faPeopleCarry);
-    library.add(faTags);
+    library.add(faPlay);
+    library.add(faPhone);
+    library.add(faEnvelopeOpenText);
+    library.add(faFax);
+    library.add(faLocationArrow);
+    library.add(faArrowRight);
 };
 
 export default ImportFA;
