@@ -17,67 +17,15 @@
   }
 
   .caption {
-    margin-left: 1.4rem;
     top: 2rem;
-    background:rgba(255,255,255,0.5);
-    padding:15px;
+    text-align: left;
+    background:rgba(255,255,255,0.8);
   }
 
   .bannerSize{
     height:190px
   }
 
-  .header-button{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 99;
-  }
-
-  .header-button-grid{
-    padding:12px 0!important;
-  }
-
-  .button-header{
-    width:100%;
-    height:3rem!important;
-    color:white!important;
-    padding: 0px!important;
-    border: none!important;
-    font-size: 1.6vh;
-    border-radius: 0!important;
-  }
-
-  .button-header-per{
-    background-color:#C4161C!important;
-    margin-left: 12px!important;
-  }
-
-  .button-header-biz{
-    background-color:#828F97!important;
-    margin-right: 12px!important;
-  }
-
-  .header-button-left{
-    display: flex;
-    justify-content: flex-end;
-    box-shadow: none!important;
-    justify-content: flex-end;
-    background-color:transparent!important;
-  }
-
-  .header-button-outer{
-    height:3rem;
-    padding-top:0.8rem!important;
-    background:rgba(000,000,000,0.5)!important;
-  }
-
-  .header-button-right{
-    display: flex;
-    box-shadow: none!important;
-    justify-content: flex-start;
-    background-color:transparent!important;
-  }
 }
 
 @media only screen and (min-width : 500px) {
@@ -99,9 +47,7 @@
   }
 
   .caption {
-    margin-left: 6rem;
     font-size: 2vw;
-    position: absolute;
     top: 5rem;
     background:transparent;
   }
@@ -110,85 +56,23 @@
     height:auto
   }
 
-  .header-button-grid{
-    padding:12px !important;
-  }
-
-  .header-button{
-    position: relative;
-    top: -6em;
-  }
-
-  .button-header{
-    width:21vw;
-    height: 6vh!important;
-    color:white!important;
-    padding: 0px!important;
-    border: none!important;
-    font-size: 1.6vh!important;
-  }
-
-  .button-header-per{
-    background-color:#C4161C!important;
-  }
-
-  .button-header-biz{
-    background-color:#828F97!important;
-  }
-
-  .header-button-left{
-    display: flex;
-    box-shadow: none!important;
-    justify-content: flex-end;
-    background-color:transparent!important;
-  }
-
-  .header-button-outer{
-    height:6vh!important;
-    padding-top:0.7em!important;
-    background:rgba(000,000,000,0.5)!important;
-  }
-
-  .header-button-right{
-    display: flex;
-    box-shadow: none!important;
-    justify-content: flex-start;
-    background-color:transparent!important;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
 
   .caption {
-    top: 2.5rem;
     font-size:3vw;
+    top: 2.5rem;
   }
 
-  .button-header{
-    height: 4.3vh!important;
-    font-size: 1.2vh!important;
-  }
-
-  .header-button-outer{
-    height: 4.3vh!important;
-    padding-top:0.85em!important;
-  }
 
 }
 
 @media (min-width: 1281px) and (max-width: 1920px) {
   .caption {
-    top: 4rem;
     font-size:2.8vw;
+    top: 4rem;
   }
 
-  .button-header{
-    height: 7.5vh!important;
-    font-size: 2.1vh!important;
-  }
-
-  .header-button-outer{
-    height: 7.5vh!important;
-  }
 }
 

@@ -12,6 +12,7 @@ import banner2 from '../../assets/header_banner/banner2.png';
 import banner3 from '../../assets/header_banner/banner3.png';
 import banner4 from '../../assets/header_banner/banner4.png';
 import banner5 from '../../assets/header_banner/banner5.png';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -62,62 +63,74 @@ class Carousel extends Component{
             <div>
                 <Slider {...settings}>
                     <div>
-                        <p className="caption">
+                        <p className="caption section-spacing">
                             FIND THE BEST RATES.<br/>
                             <b>GET EASY APPROVAL.</b>
                         </p>
                         <img className="bannerSize" src={banner1}/>
                     </div>
                     <div>
-                        <p className="caption">
+                        <p className="caption section-spacing">
                             GET YOUR DREAM HOME.<br/>
                             <b>AT THE BEST RATE.</b></p>
                         <img className="bannerSize" src={banner2}/>
                     </div>
                     <div>
-                        <p className="caption">
+                        <p className="caption section-spacing">
                             WE MAKE YOUR <b>PROPERTY<br/>
                             FINANCING EASY.</b></p>
                         <img className="bannerSize" src={banner3}/>
                     </div>
                     <div>
-                        <p className="caption">
+                        <p className="caption section-spacing">
                             FINANCE YOUR BUSINESS<br/>
                             <b>WITHOUT THE HASSLE.</b></p>
                         <img className="bannerSize" src={banner4}/>
                     </div>
                     <div>
-                        <p className="caption">
+                        <p className="caption section-spacing">
                             <b> MOVE YOUR BUSINESS<br/>
                                 FORWARD</b> WITH US.</p>
                         <img className="bannerSize" src={banner5}/>
                     </div>
                 </Slider>
 
-                <Grid container spacing={24} className="header-button">
-                    <Grid item xs={6} className="header-button-grid">
-                        <Paper className="header-button-left">
-                            <Button variant="outlined" className="button-header-per button-header">
-                                <Grid item xs={10} className="header-button-left-inner">
-                                    PERSONAL LOAN
-                                </Grid> <Grid item xs={2} className="header-button-outer">
-                                <i className="fas fa-arrow-right"></i>
-                            </Grid>
-                            </Button>
-                        </Paper>
-                    </Grid>
-                    <Grid item xs={6} className="header-button-grid">
-                        <Paper className="header-button-right">
-                            <Button variant="outlined" className="button-header-biz button-header">
-                                <Grid item xs={10} className="header-button-left-inner">
-                                    BUSINESS LOAN
-                                </Grid> <Grid item xs={2} className="header-button-outer">
-                                <i className="fas fa-arrow-right"></i>
-                            </Grid>
-                            </Button>
-                        </Paper>
-                    </Grid>
-                </Grid>
+                <div class="banner-button section-padding">
+                    
+
+
+                </div>
+
+                {/*<div className="banner section-padding">*/}
+                    {/*<div class="container">*/}
+                        {/*<Grid container spacing={24} className="header-button">*/}
+                            {/*<Grid item xs={6} className="header-button-grid">*/}
+                                {/*<Paper className="header-button-left">*/}
+                                    {/*<Button variant="outlined" className="button-header-per button-header">*/}
+                                        {/*<Grid item xs={10} >*/}
+                                            {/*PERSONAL LOAN*/}
+                                        {/*</Grid>*/}
+                                        {/*<Grid item xs={2} style={{background:"rgba(000,000,000,0.5)"}}>*/}
+                                        {/*<FontAwesomeIcon  icon="arrow-right" />*/}
+                                        {/*</Grid>*/}
+                                    {/*</Button>*/}
+                                {/*</Paper>*/}
+                            {/*</Grid>*/}
+                            {/*<Grid item xs={6} className="header-button-grid">*/}
+                                {/*<Paper className="header-button-right">*/}
+                                    {/*<Button variant="outlined" className="button-header-biz button-header">*/}
+                                        {/*<Grid item xs={10} >*/}
+                                            {/*BUSINESS LOAN*/}
+                                        {/*</Grid>*/}
+                                        {/*<Grid item xs={2} style={{background:"rgba(000,000,000,0.5)"}}>*/}
+                                        {/*<FontAwesomeIcon  icon="arrow-right" />*/}
+                                        {/*</Grid>*/}
+                                    {/*</Button>*/}
+                                {/*</Paper>*/}
+                            {/*</Grid>*/}
+                        {/*</Grid>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
             </div>
         );
     }

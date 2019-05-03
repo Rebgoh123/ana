@@ -16,12 +16,12 @@ class Home extends Component{
         return (
             <div>
                 <Carousel/>
-                <Pillars/>
-                <Service/>
-                <Bank/>
-                <Contact/>
-                <About/>
-                <Footer/>
+                {/*<Pillars/>*/}
+                {/*<Service/>*/}
+                {/*<Bank/>*/}
+                {/*<Contact/>*/}
+                {/*<About/>*/}
+                {/*<Footer/>*/}
             </div>
     );
     }
