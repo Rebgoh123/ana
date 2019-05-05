@@ -46,17 +46,8 @@ import uob_mobile from '../../assets/bank_logo/uob_mobile.png';
 import promo from '../../assets/promotion/promo1.png';
 import promo_mobile from '../../assets/promotion/promo1_mobile.png';
 
-
-
 const styles = theme => ({
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
     sectionDesktop: {
-
-
         display: 'none',
         [theme.breakpoints.up('sm')]: {
             display: 'block',
@@ -102,7 +93,6 @@ class Bank extends Component{
         };
 
         const renderDesktop = (
-
             <Slider {...settingDesktop} >
                 <div>
                     <img className="bankLogoSize" src={bea}/>
@@ -168,8 +158,6 @@ class Bank extends Component{
                     <img className="bankLogoSize" src={uob}/>
                 </div>
             </Slider>
-
-
         );
 
 
@@ -242,37 +230,15 @@ class Bank extends Component{
         );
 
         return (
-            <div className="bank">
+            <div className="bank section-spacing">
                 <h1> Our Bank Partners </h1>
                     <div className={classes.sectionDesktop}>
-                    {renderDesktop}
-
-                        <img className="bankBannerSize" src={promo}/>
-                        <div className="promoIntro">
-                            <h2>Claim a FREE $100 NTUC Voucher!</h2>
-                            <h3>Simply secure your loan with us today.</h3>
-                            <Button variant="contained" className="button-promo-per">
-                                PERSONAL LOAN
-                            </Button>
-                            <Button variant="contained" className="button-promo-biz">
-                                BUSINESS LOAN
-                            </Button>
-                        </div>
-
+                        {renderDesktop}
                     </div>
 
-                <div className={classes.sectionMobile}>
-                {renderMobile}
-
-                    <div className="bankBannerSize" style={{backgroundImage:`url(${promo_mobile})`}}/>
-
-
-                    <div class="promoIntro">
-                    <h2>Claim a FREE $100 NTUC Voucher!</h2>
-                    <h3>Simply secure your loan with us today.</h3>
-                </div>
-                </div>
-
+                    <div className={classes.sectionMobile}>
+                        {renderMobile}
+                    </div>
             </div>
         );
     }

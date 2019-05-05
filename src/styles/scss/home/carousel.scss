@@ -1,3 +1,8 @@
+$primaryRed: linear-gradient(to right, #C4161C 80%, #9D1216 50%);
+$primaryGrey: linear-gradient(to right, #828F97 80%, #69737A 50%); ;
+
+.carousel
+
 .caption {
   position: absolute;
 }
@@ -5,6 +10,48 @@
 .bannerSize{
   width:100%;
 }
+
+.per, .biz{
+  color:white!important;
+}
+
+.per{
+  background: $primaryRed!important;
+}
+
+.biz{
+  background: $primaryGrey!important;
+}
+
+.banner-button-desktop, .banner-button-tablet{
+  display: flex;
+  justify-content: center;
+  margin-top: -6vw;
+  color:white!important;
+}
+
+.banner-button-desktop{
+  margin-top: -7vw;
+}
+
+.banner-button-tablet{
+  margin-top: -10vw;
+}
+
+.banner-per-desktop, .banner-biz-desktop, .banner-per-tablet, .banner-biz-tablet{
+  margin: 1em!important;
+
+  height: 3vw;
+  width: 14vw;
+}
+
+.banner-per-tablet, .banner-biz-tablet{
+  margin: 1em!important;
+
+  height: 4vw;
+  width: 18vw;
+}
+
 
 @media screen and (min-width: 300px) {
 
@@ -26,6 +73,29 @@
     height:190px
   }
 
+  .banner-button-mobile {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner-per-mobile, .banner-biz-mobile{
+    width:50%;
+    border-radius: 0 !important;
+    height: 12vw;
+  }
+
+  .right-arrow-loan-mobile{
+    left: 5.8vw;
+    position: relative;
+  }
+
+  .right-arrow-mobile{
+    left: 6.5vw;
+    position: relative;
+  }
 }
 
 @media only screen and (min-width : 500px) {
@@ -56,22 +126,57 @@
     height:auto
   }
 
+  .banner-per, .banner-biz{
+    width:50%;
+    border-radius: 0 !important;
+  }
+
+
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
-
   .caption {
     font-size:3vw;
     top: 2.5rem;
   }
 
+  .banner-per-mobile, .banner-biz-mobile{
+    width:50%;
+    border-radius: 0 !important;
+    height: 7vw;
+    font-size:2.3vw!important;
+  }
 
+  .right-arrow-mobile{
+    left: 11vw;
+    position: relative;
+  }
+
+  .right-arrow-loan-tablet{
+    left: 1.5vw;
+    position: relative;
+  }
+
+  .right-arrow-tablet{
+    left: 1.8vw;
+    position: relative;
+  }
 }
 
 @media (min-width: 1281px) and (max-width: 1920px) {
   .caption {
     font-size:2.8vw;
     top: 4rem;
+  }
+
+  .right-arrow-loan-desktop{
+    left: 2.2vw;
+    position: relative;
+  }
+
+  .right-arrow-desktop{
+    left: 2.5vw;
+    position: relative;
   }
 
 }

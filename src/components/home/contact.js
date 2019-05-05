@@ -6,14 +6,15 @@ import bg from '../../assets/bg_contact.png';
 
 const Contact = function (){
     return (
-        <div className="contact" style={{backgroundImage:`url(${bg})`,backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% 100%', padding:'3em'}} >
+        <div className="contact-mobile">
+        <div className="contact section-spacing" style={{backgroundImage:`url(${bg})`,backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%', paddingTop:'2em', paddingBottom:'2em'}} >
 
             <div className="contact-info">
 
                 <h1> Get In Touch With Us</h1>
 
-                <Grid container spacing={24} style={{padding:'1em'}}>
+                <Grid container spacing={24} style={{padding:'0 3em'}}>
                 <Grid item md={6} xs={12}>
                 <div className="contact-label">
                 <FontAwesomeIcon className="contact-icon" icon="phone" /> Call Us!
@@ -48,7 +49,7 @@ const Contact = function (){
                     Leave a message
                 </Button>
             </div>
-
+            </div>
 
 
         </div>

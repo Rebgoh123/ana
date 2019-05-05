@@ -14,6 +14,7 @@ import business_mobile from '../../assets/service_image/business_mobile.png';
 import commercial_mobile from '../../assets/service_image/commercial_mobile.png';
 import equity_mobile from '../../assets/service_image/equity_mobile.png';
 import residential_mobile from '../../assets/service_image/residential_mobile.png';
+import promo_mobile from "../../assets/promotion/promo1_mobile.png";
 
 
 const styles = theme => ({
@@ -24,7 +25,6 @@ const styles = theme => ({
         },
     },
     sectionMobile: {
-        display: 'flex',
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
@@ -36,72 +36,33 @@ class Service extends React.Component {
     render() {
         const { classes } = this.props;
 
-        const renderMobileService = (
-                <Grid container spacing={24} style={{overflow:'hidden'}}>
-                    <Grid item xs={12} className="no-padding">
-                    <div className="service-square">
-                        <img className="service-size" src={residential_mobile}/>
-
-                        <p className="service-subtitle"> Residential Property Loan</p>
-                    </div>
-                </Grid>
-
-                    <Grid item xs={12} className="no-padding">
-                    <div className="service-square">
-                        <img className="service-size" src={commercial_mobile}/>
-
-                        <p className="service-subtitle"> Commercial Property Loan</p>
-                    </div>
-                </Grid>
-
-                    <Grid item xs={12} className="no-padding">
-                    <div className="service-square">
-                        <img className="service-size" src={equity_mobile}/>
-
-                        <p className="service-subtitle"> Equity Loan</p>
-                    </div>
-                </Grid>
-
-                    <Grid item xs={12} className="no-padding">
-                    <div className="service-square">
-                        <img className="service-size" src={business_mobile}/>
-                        <p className="service-subtitle"> Business Loan</p>
-                    </div>
-                </Grid>
-            </Grid>
-        );
-
         const renderDesktopService = (
             <Grid container spacing={24}>
                 <Grid item xs>
-                    <div className="service-square">
+                    <div className="service-container">
                         <img className="service-size" src={residential}/>
-
-                        <p className="service-subtitle"> Residential Property Loan</p>
+                        <p className="centered"> Commercial Property Loan</p>
                     </div>
                 </Grid>
 
                 <Grid item xs>
-                    <div className="service-square">
+                    <div className="service-container">
                         <img className="service-size" src={commercial}/>
-
-                        <p className="service-subtitle"> Commercial Property Loan</p>
+                        <p className="centered"> Commercial Property Loan</p>
                     </div>
                 </Grid>
 
                 <Grid item xs>
-                    <div className="service-square">
+                    <div className="service-container">
                         <img className="service-size" src={equity}/>
-
-                        <p className="service-subtitle"> Equity Loan</p>
+                        <p className="centered"> Equity Loan</p>
                     </div>
                 </Grid>
 
                 <Grid item xs>
-                    <div className="service-square">
+                    <div className="service-container">
                         <img className="service-size" src={business}/>
-
-                        <p className="service-subtitle"> Business Loan</p>
+                        <p className="centered"> Business Loan</p>
                     </div>
                 </Grid>
             </Grid>
@@ -113,13 +74,33 @@ class Service extends React.Component {
                 <h1>Our Services</h1>
 
                 <div className={classes.sectionDesktop}>
+                    <div className="section-spacing">
                     {renderDesktopService}
+                    </div>
                 </div>
 
                 <div className={classes.sectionMobile}>
-                    {renderMobileService}
-                </div>
+                    <div className="service-container">
 
+                        <img className="service-size" src={residential_mobile}/>
+                        <p className="centered"> Residential Property Loan</p>
+                    </div>
+
+                    <div className="service-container">
+                        <img className="service-size" src={commercial_mobile}/>
+                        <p className="centered"> Commercial Property Loan</p>
+                    </div>
+
+                    <div className="service-container">
+                        <img className="service-size" src={equity_mobile}/>
+                        <p className="centered"> Equity Loan</p>
+                    </div>
+
+                    <div className="service-container">
+                        <img className="service-size" src={business_mobile}/>
+                        <p className="centered"> Business Loan</p>
+                    </div>
+                </div>
 
             </div>
         );

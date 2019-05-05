@@ -1,18 +1,12 @@
 .contact-info{
-
- width:100%;
-height:100%;
-}
-
-.contact-info{
-  width: 80%;
-  height: 100%;
   display: block;
   margin: auto;
   background: white;
   padding: 2em;
   color:#828F97;
 }
+
+
 
 .contact-label{
   color:black;
@@ -33,4 +27,25 @@ height:100%;
   margin:auto!important;
   color:#C4161C!important;
   border-color:#C4161C!important;
+}
+
+@media screen and (min-width: 300px) {
+  .contact-mobile{
+    padding-top:3.4em;
+  }
+  .contact-info{
+    font-size:3.5vw;
+  }
+}
+
+@media only screen and (min-width : 500px) {
+  .contact-mobile{
+    padding-top:0em;
+  }
+  .contact-info{
+    font-size:2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
 }

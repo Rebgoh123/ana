@@ -9,7 +9,7 @@ const Footer = function (){
     return (
         <div className="footer">
 
-            <div className="footer-info">
+            <div className="footer-info" >
                 Copyright © 2019 Augend & Addend. All Rights Reserved
             </div>
         </div>

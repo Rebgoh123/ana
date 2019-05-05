@@ -34,8 +34,16 @@ const THEME = createMuiTheme({
         "fontWeightLight": 300,
         "fontWeightRegular": 400,
         "fontWeightMedium": 500
+    },
+    overrides: {
+        // MuiGrid: {
+        //     container: {
+        //         '&$spacing-xs-24': {
+        //             margin: '0 0 0 0',
+        //         }
+        //     }
+        // }
     }
-
 });
 
 
@@ -44,7 +52,7 @@ function App() {
 <MuiThemeProvider theme={THEME}>
     <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
-            <div className="App">
+            <div>
                 <NavBar/>
                 <Switch>
                     <Route path="/" component={Home}/>

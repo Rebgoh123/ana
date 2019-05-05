@@ -5,20 +5,44 @@
 .about-info{
   color:white;
   width: 80%;
-  height: 100%;
   display: block;
   margin: auto;
-  padding: 2em;
+  padding-top: 2em;
 }
 
 .about p{
   font-size:1vw;
 }
 
+.aboutBanner{
+  width:100%;
+}
+
+.aboutBanner-mobile{
+  width:50%;
+  display: block;
+  margin: auto;
+}
+
 
 @media screen and (min-width: 300px) {
   .about p{
-    font-size:3vw;
+    font-size:3.5vw;
   }
+
+}
+
+@media only screen and (min-width : 500px) {
+
+  .about p{
+    font-size:2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+}
+
+@media (min-width: 1024px) and (max-width: 1280px)  {
 
 }

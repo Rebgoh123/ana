@@ -185,7 +185,7 @@ class NavBar extends React.Component {
         );
 
         const renderMobileMenu = (
-            <Drawer anchor="right" open={this.state.right}>
+            <Drawer anchor="top" open={this.state.right}>
                 <div>
                     {sideList}
                 </div>

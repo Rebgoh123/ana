@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import withWidth  from '@material-ui/core/withWidth';
+
+
 
 import banner1 from '../../assets/header_banner/banner1.png';
 import banner2 from '../../assets/header_banner/banner2.png';
@@ -14,7 +14,7 @@ import banner4 from '../../assets/header_banner/banner4.png';
 import banner5 from '../../assets/header_banner/banner5.png';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-function SampleNextArrow(props) {
+function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
@@ -25,7 +25,7 @@ function SampleNextArrow(props) {
     );
 }
 
-function SamplePrevArrow(props) {
+function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
@@ -36,15 +36,6 @@ function SamplePrevArrow(props) {
     );
 }
 
-const styles = theme => ({
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-
-});
-
 class Carousel extends Component{
 
     render() {
@@ -53,91 +44,78 @@ class Carousel extends Component{
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />,
+            nextArrow: <NextArrow />,
+            prevArrow: <PrevArrow />,
             autoplay: true,
             autoplaySpeed: 4000,
             pauseOnHover: true,
         };
+
+        const buttonSize = /xs|sm/.test(this.props.width) ? 'small' : /md/.test(this.props.width) ? 'medium' : 'large';
+        const type = /xs|sm/.test(this.props.width) ? 'mobile' : /md/.test(this.props.width) ? 'tablet' : 'desktop';
+
         return (
-            <div>
-                <Slider {...settings}>
+            <div className="carousel section-padding">
+
+            <Slider {...settings}>
                     <div>
-                        <p className="caption section-spacing">
-                            FIND THE BEST RATES.<br/>
-                            <b>GET EASY APPROVAL.</b>
+                        <div className="section-spacing">
+                            <p className="caption">
+                            FIND THE BEST RATES.<br/> <b>GET EASY APPROVAL.</b>
                         </p>
+                        </div>
                         <img className="bannerSize" src={banner1}/>
                     </div>
+
                     <div>
-                        <p className="caption section-spacing">
-                            GET YOUR DREAM HOME.<br/>
-                            <b>AT THE BEST RATE.</b></p>
+                    <div className="section-spacing">
+                        <p className="caption">
+                            GET YOUR DREAM HOME.<br/> <b>AT THE BEST RATE.</b></p>
+                    </div>
                         <img className="bannerSize" src={banner2}/>
                     </div>
+
                     <div>
-                        <p className="caption section-spacing">
-                            WE MAKE YOUR <b>PROPERTY<br/>
-                            FINANCING EASY.</b></p>
+                    <div className="section-spacing">
+                        <p className="caption">
+                            WE MAKE YOUR <b>PROPERTY<br/> FINANCING EASY.</b></p>
+                    </div>
                         <img className="bannerSize" src={banner3}/>
                     </div>
+
                     <div>
-                        <p className="caption section-spacing">
-                            FINANCE YOUR BUSINESS<br/>
-                            <b>WITHOUT THE HASSLE.</b></p>
+                        <div className="section-spacing">
+                            <p className="caption">
+                            FINANCE YOUR BUSINESS<br/> <b>WITHOUT THE HASSLE.</b></p>
+                        </div>
                         <img className="bannerSize" src={banner4}/>
                     </div>
+
                     <div>
-                        <p className="caption section-spacing">
-                            <b> MOVE YOUR BUSINESS<br/>
-                                FORWARD</b> WITH US.</p>
+                        <div className="section-spacing">
+                            <p className="caption">
+                                <b> MOVE YOUR BUSINESS<br/> FORWARD</b> WITH US.</p>
+                        </div>
                         <img className="bannerSize" src={banner5}/>
                     </div>
+
                 </Slider>
 
-                <div class="banner-button section-padding">
-                    
-
-
+                <div className="section-padding">
+                    <div className={"banner-button-" + type} style={{zIndex:'99', backgroundColor:'white'}} >
+                        <Button className={"banner-per-" + type + " per"} size={buttonSize}>
+                            PERSONAL LOAN <FontAwesomeIcon className={"right-arrow-loan-" + type} style={{}} icon="arrow-right"/>
+                        </Button>
+                        <Button className={"banner-biz-" + type + " biz"} size={buttonSize}>
+                            BUSINESS LOAN <FontAwesomeIcon className={"right-arrow-" + type} icon="arrow-right"/>
+                        </Button>
+                        <span></span>
+                    </div>
                 </div>
-
-                {/*<div className="banner section-padding">*/}
-                    {/*<div class="container">*/}
-                        {/*<Grid container spacing={24} className="header-button">*/}
-                            {/*<Grid item xs={6} className="header-button-grid">*/}
-                                {/*<Paper className="header-button-left">*/}
-                                    {/*<Button variant="outlined" className="button-header-per button-header">*/}
-                                        {/*<Grid item xs={10} >*/}
-                                            {/*PERSONAL LOAN*/}
-                                        {/*</Grid>*/}
-                                        {/*<Grid item xs={2} style={{background:"rgba(000,000,000,0.5)"}}>*/}
-                                        {/*<FontAwesomeIcon  icon="arrow-right" />*/}
-                                        {/*</Grid>*/}
-                                    {/*</Button>*/}
-                                {/*</Paper>*/}
-                            {/*</Grid>*/}
-                            {/*<Grid item xs={6} className="header-button-grid">*/}
-                                {/*<Paper className="header-button-right">*/}
-                                    {/*<Button variant="outlined" className="button-header-biz button-header">*/}
-                                        {/*<Grid item xs={10} >*/}
-                                            {/*BUSINESS LOAN*/}
-                                        {/*</Grid>*/}
-                                        {/*<Grid item xs={2} style={{background:"rgba(000,000,000,0.5)"}}>*/}
-                                        {/*<FontAwesomeIcon  icon="arrow-right" />*/}
-                                        {/*</Grid>*/}
-                                    {/*</Button>*/}
-                                {/*</Paper>*/}
-                            {/*</Grid>*/}
-                        {/*</Grid>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
             </div>
         );
     }
 }
 
-function mapStateToProps(props){
-    return props
-}
 
-export default connect(mapStateToProps) (Carousel);
+export default withWidth()(Carousel);
