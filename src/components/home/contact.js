@@ -50,8 +50,6 @@ const Contact = function (){
                 </Button>
             </div>
             </div>
-
-
         </div>
     );
 }

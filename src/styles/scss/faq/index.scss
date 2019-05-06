@@ -1,0 +1,34 @@
+.faq{
+  background:#F4F6F7;
+  min-height:100vh;
+  height:100%;
+  padding-top: 1em;
+}
+
+
+.faq-item{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+
+.faq-caption {
+  display: block;
+}
+
+
+.faq-tab {
+  background: white!important;
+  margin-right: 2em!important;
+  width:24vw;
+}
+
+.MuiExpansionPanelSummary-expandIcon-282 {
+  left: 8px!important;
+  right: unset!important;
+}
+
+.faq-centered{
+  text-align: center;
+  color:#828F97;
+}

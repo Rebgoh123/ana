@@ -15,6 +15,8 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 import reducers from './reducers';
 import Home from './components/home/index';
+import Team from './components/team/index';
+import Faq from './components/faq/index';
 import NavBar from './components/app/header';
 
 const loggerMiddleware = createLogger();
@@ -36,13 +38,13 @@ const THEME = createMuiTheme({
         "fontWeightMedium": 500
     },
     overrides: {
-        // MuiGrid: {
-        //     container: {
-        //         '&$spacing-xs-24': {
-        //             margin: '0 0 0 0',
-        //         }
-        //     }
-        // }
+        MuiExpansionPanelSummary: {
+            expandIcon: {
+                left: '8px',
+                right: 'unset',
+                color:'#C4161C',
+            }
+        }
     }
 });
 
@@ -55,6 +57,8 @@ function App() {
             <div>
                 <NavBar/>
                 <Switch>
+                    <Route path="/team" component={Team}/>
+                    <Route path="/faq" component={Faq}/>
                     <Route path="/" component={Home}/>
                 </Switch>
             </div>
