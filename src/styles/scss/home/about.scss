@@ -2,6 +2,10 @@
   background:#828F97;
 }
 
+.about-content{
+  margin: auto!important;
+}
+
 .about-info{
   color:white;
   width: 80%;
@@ -10,39 +14,60 @@
   padding-top: 2em;
 }
 
-.about p{
-  font-size:1vw;
-}
-
 .aboutBanner{
+  display: inline-block;
   width:100%;
 }
 
-.aboutBanner-mobile{
-  width:50%;
-  display: block;
-  margin: auto;
-}
+
 
 
 @media screen and (min-width: 300px) {
-  .about p{
-    font-size:3.5vw;
+  .about{
+    padding-bottom: 2em;
+
   }
 
+  .aboutBanner-mobile{
+    width:60%;
+    display: block;
+    margin: auto;
+  }
+
+  .contact-tc.p {
+   font-weight: 500;
+  }
 }
 
 @media only screen and (min-width : 500px) {
-
-  .about p{
-    font-size:2vw;
+  .contact-tc.p {
+    font-size: 14px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1280px)  {
+  .contact-tc.p {
+    font-size: 14px;
+  }
+
+  .about-content{
+    width: 100%!important;
+  }
+
+  .aboutBanner-mobile{
+    width:40%;
+    display: block;
+    margin: auto;
+  }
 
 }
 
-@media (min-width: 1024px) and (max-width: 1280px)  {
+@media (min-width: 1281px)  {
+  .about-content{
+    width: 60%!important;
+  }
 
+  .contact-tc.p {
+    font-size: 14px;
+  }
 }

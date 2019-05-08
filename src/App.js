@@ -1,6 +1,7 @@
 import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlay,faPhone,faEnvelopeOpenText,faFax,faLocationArrow,faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faWhatsapp,faWhatsappSquare } from '@fortawesome/free-brands-svg-icons'
 
 import "../node_modules/slick-carousel/slick/slick.css";
 import "../node_modules/slick-carousel/slick/slick-theme.css";
@@ -17,6 +18,7 @@ import reducers from './reducers';
 import Home from './components/home/index';
 import Team from './components/team/index';
 import Faq from './components/faq/index';
+import Contact from './components/contact/index';
 import NavBar from './components/app/header';
 
 const loggerMiddleware = createLogger();
@@ -28,6 +30,8 @@ library.add(faEnvelopeOpenText);
 library.add(faFax);
 library.add(faLocationArrow);
 library.add(faArrowRight);
+library.add(faWhatsappSquare);
+library.add(faWhatsapp);
 
 const THEME = createMuiTheme({
     typography: {
@@ -48,6 +52,10 @@ const THEME = createMuiTheme({
     }
 });
 
+const ScrollToTop = () => {
+    window.scrollTo(0, 0);
+    return null;
+};
 
 function App() {
   return (
@@ -55,11 +63,14 @@ function App() {
     <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
             <div>
+                <Route component={ScrollToTop} />
                 <NavBar/>
                 <Switch>
                     <Route path="/team" component={Team}/>
                     <Route path="/faq" component={Faq}/>
+                    <Route path="/contact" component={Contact}/>
                     <Route path="/" component={Home}/>
+
                 </Switch>
             </div>
         </BrowserRouter>
@@ -69,4 +80,4 @@ function App() {
 }
 
 export default App;
-//
+

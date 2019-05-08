@@ -1,0 +1,30 @@
+.at-expanding-share-button .at-expanding-share-button-toggle-bg>span {
+  background-image: url('../../assets/social_media/share.svg')!important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: transform .4s ease;
+  border-radius: 0!important;
+  display: block;
+  border: none!important;
+}
+
+.at-expanding-share-button.at-expanding-share-button-mobile .at-expanding-share-button-toggle-bg, .at-expanding-share-button.at-expanding-share-button-mobile .at-expanding-share-button-toggle-bg span {
+  height: 50px;
+  width: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .at-expanding-share-button {
+    bottom: 65px  !important;
+  }
+
+}
+
+@media (min-width: 1281px) {
+  .at-expanding-share-button {
+    right: 40px !important;
+    bottom: 65px  !important;
+
+
+  }
+}

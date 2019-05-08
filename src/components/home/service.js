@@ -2,8 +2,6 @@ import React  from 'react';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
 
 import business from '../../assets/service_image/business.png';
 import commercial from '../../assets/service_image/commercial.png';
@@ -14,8 +12,10 @@ import business_mobile from '../../assets/service_image/business_mobile.png';
 import commercial_mobile from '../../assets/service_image/commercial_mobile.png';
 import equity_mobile from '../../assets/service_image/equity_mobile.png';
 import residential_mobile from '../../assets/service_image/residential_mobile.png';
-import promo_mobile from "../../assets/promotion/promo1_mobile.png";
-
+import confidential from "../../assets/pillars_logo/confidential.svg";
+import personalised from "../../assets/pillars_logo/personalised.svg";
+import experience from "../../assets/pillars_logo/experience.svg";
+import best from "../../assets/pillars_logo/best.svg";
 
 const styles = theme => ({
     sectionDesktop: {
@@ -36,38 +36,19 @@ class Service extends React.Component {
     render() {
         const { classes } = this.props;
 
-        const renderDesktopService = (
-            <Grid container spacing={24}>
-                <Grid item xs>
-                    <div className="service-container">
-                        <img className="service-size" src={residential}/>
-                        <p className="centered"> Commercial Property Loan</p>
-                    </div>
-                </Grid>
+        const contentDesktop = [
+            {"id" : 1, "image":<img className="service-size" src={residential}/>, "sub":'Residential Property Loan'},
+            {"id" : 2, "image":<img className="service-size" src={commercial}/>, "sub":'Commercial Property Loan'},
+            {"id" : 3, "image":<img className="service-size" src={equity}/>, "sub":'Equity Loan'},
+            {"id" : 4, "image":<img className="service-size" src={business}/>, "sub":' Business Loan'},
+        ];
 
-                <Grid item xs>
-                    <div className="service-container">
-                        <img className="service-size" src={commercial}/>
-                        <p className="centered"> Commercial Property Loan</p>
-                    </div>
-                </Grid>
-
-                <Grid item xs>
-                    <div className="service-container">
-                        <img className="service-size" src={equity}/>
-                        <p className="centered"> Equity Loan</p>
-                    </div>
-                </Grid>
-
-                <Grid item xs>
-                    <div className="service-container">
-                        <img className="service-size" src={business}/>
-                        <p className="centered"> Business Loan</p>
-                    </div>
-                </Grid>
-            </Grid>
-        );
-
+        const contentMobile = [
+            {"id" : 1, "image":<img className="service-size" src={residential_mobile}/>, "sub":'Residential Property Loan'},
+            {"id" : 2, "image":<img className="service-size" src={commercial_mobile}/>, "sub":'Commercial Property Loan'},
+            {"id" : 3, "image":<img className="service-size" src={equity_mobile}/>, "sub":'Equity Loan'},
+            {"id" : 4, "image":<img className="service-size" src={business_mobile}/>, "sub":' Business Loan'},
+        ];
 
         return (
             <div className="service">
@@ -75,33 +56,27 @@ class Service extends React.Component {
 
                 <div className={classes.sectionDesktop}>
                     <div className="section-spacing">
-                    {renderDesktopService}
+                        <Grid container spacing={24}>
+                                {contentDesktop.map((value) =>
+                                    <Grid item xs>
+                                    <div className="service-container">
+                                        {value.image}
+                                        <p className="centered"> {value.sub} </p>
+                                    </div>
+                                    </Grid>
+                                )}
+                        </Grid>
                     </div>
                 </div>
 
                 <div className={classes.sectionMobile}>
-                    <div className="service-container">
-
-                        <img className="service-size" src={residential_mobile}/>
-                        <p className="centered"> Residential Property Loan</p>
-                    </div>
-
-                    <div className="service-container">
-                        <img className="service-size" src={commercial_mobile}/>
-                        <p className="centered"> Commercial Property Loan</p>
-                    </div>
-
-                    <div className="service-container">
-                        <img className="service-size" src={equity_mobile}/>
-                        <p className="centered"> Equity Loan</p>
-                    </div>
-
-                    <div className="service-container">
-                        <img className="service-size" src={business_mobile}/>
-                        <p className="centered"> Business Loan</p>
-                    </div>
+                    {contentMobile.map((value) =>
+                        <div className="service-container">
+                            {value.image}
+                            <p className="centered"> {value.sub} </p>
+                        </div>
+                    )}
                 </div>
-
             </div>
         );
     }

@@ -15,48 +15,16 @@
   color:#828F97;
 }
 
-.button-promo-per{
-  font-size: 1.6vw!important;
-  color: #ffffff !important;
-  background: #C4161C!important;
-  padding: 0.7em!important;
-}
-
-.button-promo-biz{
-  font-size: 1.6vw!important;
-  margin-left:2em!important;
-  color:#C4161C!important;
-  background: #fff!important;
-  padding: 0.5em!important;
-}
-
 @media screen and (min-width: 300px) {
-
-  .bank .slick-list {
-    margin: 0 2em !important;
-  }
   .bankLogoSize {
     height: 100%;
     width: 100%;
   }
-
-  .promoIntro {
-    margin: -12em 4em 0 4em;
-    font-size: 3vw;
-    color: white;
-  }
 }
-
 
 @media only screen and (min-width : 500px) {
   .bank .slick-list{
     margin: 0 4.5em!important;
-  }
-
-  .promoIntro{
-    margin: -12.5em 4em 0 4em;
-    font-size: 1.8vw;
-    color: white;
   }
 
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
+import {Helmet} from "react-helmet";
 
 import Carousel from './carousel';
 import Pillars from './pillars'
@@ -11,7 +10,10 @@ import Promo from './promo'
 import Contact from './contact'
 import About from './about'
 import Footer from './footer'
-import Test from './test'
+import Button from '@material-ui/core/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import wa from '../../assets/social_media/wa.svg';
+import banner1 from "../../assets/header_banner/banner1.png";
 
 class Home extends Component{
 
@@ -19,6 +21,7 @@ class Home extends Component{
 
         return (
             <div>
+
                         <Carousel/>
                         <Pillars/>
                         <Service/>
@@ -27,6 +30,16 @@ class Home extends Component{
                         <Contact/>
                         <About/>
                         <Footer/>
+
+                <div className="float">
+                <Button aria-label="WA" className="float-btn">
+                    <img src={wa}/>
+                </Button>
+                </div>
+                    <Helmet>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cd311b2d9c2967b"></script>
+                    </Helmet>
+
             </div>
     );
     }

@@ -80,6 +80,7 @@ const styles = theme => ({
 });
 
 class NavBar extends React.Component {
+
     state = {
         anchorElServices: null,
         anchorElCalculators: null,

@@ -1,11 +1,5 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import Slider from "react-slick";
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import {withStyles} from "@material-ui/core";
 import PropTypes from "prop-types";
 
@@ -43,9 +37,6 @@ import singapurafinance_mobile from '../../assets/bank_logo/singapurafinance_mob
 import standchart_mobile from '../../assets/bank_logo/standchart_mobile.png';
 import uob_mobile from '../../assets/bank_logo/uob_mobile.png';
 
-import promo from '../../assets/promotion/promo1.png';
-import promo_mobile from '../../assets/promotion/promo1_mobile.png';
-
 const styles = theme => ({
     sectionDesktop: {
         display: 'none',
@@ -67,11 +58,6 @@ class Bank extends Component{
     render() {
         const { classes } = this.props;
 
-        const bg = {
-            backgroundImage: `linear-gradient(to bottom, rgba(205, 169, 157, 0.7), rgba(205, 169, 157, 0.7)),
-  url(${promo_mobile})`
-        };
-
         const settingDesktop = {
             dots: true,
             infinite: true,
@@ -92,152 +78,65 @@ class Bank extends Component{
             pauseOnHover: true,
         };
 
-        const renderDesktop = (
-            <Slider {...settingDesktop} >
-                <div>
-                    <img className="bankLogoSize" src={bea}/>
-                </div>
+        const contentDesktop = [
+            {"id" : 1, "image": <img className="bankLogoSize" src={bea}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={boc}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={cimb}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={citibank}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={dbs}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={ethoz}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={HLfinance}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={hsbc}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={maybank}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={ocbc}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={posb}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={rhb}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={sbi}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={singapurafinance}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={standchart}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={uob}/>},
+        ];
 
-                <div>
-                    <img className="bankLogoSize" src={boc}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={cimb}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={citibank}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={dbs}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={ethoz}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={HLfinance}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={hsbc}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={maybank}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={ocbc}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={posb}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={rhb}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={sbi}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={singapurafinance}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={standchart}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={uob}/>
-                </div>
-            </Slider>
-        );
-
-
-        const renderMobile = (
-            <Slider {...settingsMobile}>
-                <div>
-                    <img className="bankLogoSize" src={bea_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={boc_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={cimb_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={citibank_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={dbs_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={ethoz_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={HLfinance_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={hsbc_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={maybank_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={ocbc_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={posb_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={rhb_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={sbi_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={singapurafinance_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={standchart_mobile}/>
-                </div>
-
-                <div>
-                    <img className="bankLogoSize" src={uob_mobile}/>
-                </div>
-            </Slider>
-        );
+        const contentMobile = [
+            {"id" : 1, "image": <img className="bankLogoSize" src={bea_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={boc_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={cimb_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={citibank_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={dbs_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={ethoz_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={HLfinance_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={hsbc_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={maybank_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={ocbc_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={posb_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={rhb_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={sbi_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={singapurafinance_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={standchart_mobile}/>},
+            {"id" : 1, "image": <img className="bankLogoSize" src={uob_mobile}/>},
+        ];
 
         return (
             <div className="bank section-spacing">
                 <h1> Our Bank Partners </h1>
                     <div className={classes.sectionDesktop}>
-                        {renderDesktop}
+                        <Slider {...settingDesktop} >
+                            {contentDesktop.map((value) =>
+                                <div>
+                                    {value.image}
+                                </div>
+                            )}
+                        </Slider>
                     </div>
 
                     <div className={classes.sectionMobile}>
-                        {renderMobile}
+                        <Slider {...settingsMobile}>
+                            {contentMobile.map((value) =>
+                                <div>
+                                    {value.image}
+                                </div>
+                            )}
+                        </Slider>
                     </div>
             </div>
         );

@@ -1,0 +1,23 @@
+.contact-form{
+  min-height:100vh;
+  height:100%;
+  padding-top: 1em;
+  background-repeat: no-repeat;
+}
+
+.input{
+  width: 100%;
+  border: 1px solid #ced4da;
+  padding: 10px 12px;
+  position: relative;
+  font-size: 16px;
+  transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.input:focus{
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  border-color: #80bdff;
+  border-radius: 4px;
+}

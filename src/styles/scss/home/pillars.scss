@@ -2,6 +2,7 @@ $primaryRed: #C4161C;
 
 .pillars{
   margin-bottom:2em;
+  width:60%;
 }
 
 .pillars-round{
@@ -20,6 +21,8 @@ $primaryRed: #C4161C;
 
 .pillars-subtitle{
   text-align: center;
+  font-weight: 500;
+
 }
 
 .pillar-button-desktop, .pillar-button-tablet, .pillar-button-mobile{
@@ -27,6 +30,7 @@ $primaryRed: #C4161C;
   align-items: center;
   justify-content: center;
   padding-top:1vw;
+
 }
 
 .pillar-desktop, .pillar-tablet, .pillar-mobile{
@@ -40,28 +44,56 @@ $primaryRed: #C4161C;
     height: 5em;
   }
 
-  .pillars-subtitle{
-    font-size:3.5vw;
+  .pillar-mobile {
+    padding: 5px 30px!important;
   }
 }
 
 @media only screen and (min-width : 500px) {
+  .pillars{
+    padding-bottom: 2em;
+  }
+
   .pillars-round{
     width: 134px;
     height: 134px;
   }
-  .pillars-subtitle{
-    font-size:1.2em;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
-  .pillars-round{
+  .pillars {
+    margin-top: 5vw;
+    margin-bottom: 2em;
+  }
+
+  .pillars-round {
     width: 90px;
     height: 90px;
   }
 
-  .pillars-subtitle{
-    font-size:1em;
+  .pillar-tablet {
+    padding: 10px 50px!important;
   }
+}
+
+@media (min-width: 1281px){
+  .pillars{
+    margin-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  .pillar-button{
+    padding: 10px 40px;
+  }
+
+  .pillar-desktop {
+    padding: 10px 60px!important;
+  }
+}
+
+@media (min-width: 1450px){
+  .pillars{
+    padding-bottom: 5vw;
+  }
+
 }

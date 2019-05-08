@@ -28,6 +28,8 @@ class About extends React.Component {
     render() {
         const { classes } = this.props;
 
+        const About = 'Capital by Augend & Addend is an independent mortgage advisory established in 2019. Capital by Augend & Addend is an independent mortgage advisory established in 2019. Capital by Augend & Addend is an independent mortgage advisory established in 2019.\n'
+
         const renderMobileService = (
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -35,14 +37,16 @@ class About extends React.Component {
                         </Grid>
 
                         <Grid item xs={12}>
-                            <p className="contact-para">
+                            <p className="contact-para p">
                                 <b>About</b><br/><br/><br/>
-                                Capital by Augend & Addend is an independent mortgage advisory established in 2019. Capital by Augend & Addend is an independent mortgage advisory established in 2019. Capital by Augend & Addend is an independent mortgage advisory established in 2019.
+
+                                Capital by Augend & Addend is an independent mortgage advisory established in 2019. Capital by Augend & Addend is an independent mortgage advisory established in 2019.<br/><br/>
+                                Capital by Augend & Addend is an independent mortgage advisory established in 2019.
                             </p>
                         </Grid>
 
                         <Grid item xs={12}>
-                            <p className="contact-para" style={{textAlign:'center'}}>Privacy Policy • Terms & Conditions</p>
+                            <div className="contact-tc p" style={{textAlign:'center'}}>Privacy Policy • Terms & Conditions</div>
                         </Grid>
                     </Grid>
 
@@ -51,19 +55,20 @@ class About extends React.Component {
 
         const renderDesktopService = (
 
-                    <Grid container spacing={24} style={{padding:'1em'}}>
-                        <Grid item md={3} xs={12} style={{marginRight: '3em'}}>
+                    <Grid container spacing={24} style={{padding:'1em'}} className='about-content'>
+                        <Grid item md={4} xs={12} style={{marginRight: '3em'}}>
                             <img className="aboutBanner" src={about_us}/>
 
-                            <p className="contact-para">Privacy Policy • Terms & Conditions</p>
+                            <div className="contact-tc p">Privacy Policy • Terms & Conditions</div>
                         </Grid>
 
-                        <Grid item  md={8} xs={12}>
+                        <Grid item  md={7} xs={12}>
 
-                            <p className="contact-para" >
+                            <div className="contact-para p" >
                                 <b>About</b><br/><br/><br/>
-                                Capital by Augend & Addend is an independent mortgage advisory established in 2019. Capital by Augend & Addend is an independent mortgage advisory established in 2019. Capital by Augend & Addend is an independent mortgage advisory established in 2019.
-                            </p>
+                                Capital by Augend & Addend is an independent mortgage advisory established in 2019. Capital by Augend & Addend is an independent mortgage advisory established in 2019.<br/><br/>
+                                Capital by Augend & Addend is an independent mortgage advisory established in 2019.
+                            </div>
                         </Grid>
                     </Grid>
         );
