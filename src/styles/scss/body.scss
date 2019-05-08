@@ -52,6 +52,9 @@ div#root {
 }
 
 @media screen and (min-width: 300px) {
+  .float{
+    display:none;
+  }
 
   .footer{
     margin-bottom:45px;
@@ -86,6 +89,10 @@ div#root {
 }
 
 @media only screen and (min-width : 500px) {
+  .float{
+    display:block;
+  }
+
   h1{
     font-size: 20px;
   }

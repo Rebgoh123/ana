@@ -13,7 +13,17 @@
   width: 50px;
 }
 
+@media screen and (min-width: 300px) {
+
+  .at-expanding-share-button {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1280px) {
+  .at-expanding-share-button{
+    display: block;
+  }
   .at-expanding-share-button {
     bottom: 65px  !important;
   }
@@ -21,6 +31,10 @@
 }
 
 @media (min-width: 1281px) {
+  .at-expanding-share-button{
+    display: block;
+  }
+
   .at-expanding-share-button {
     right: 40px !important;
     bottom: 65px  !important;
@@ -28,3 +42,4 @@
 
   }
 }
+
